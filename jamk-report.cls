@@ -72,6 +72,11 @@
     justification=justified,
     singlelinecheck=false
 }
+\captionsetup[listing]{
+    font={stretch=2.0},
+    justification=justified,
+    singlelinecheck=false
+}
 
 % Figure command
 %% Takes 4 parameters. width, path to image, caption and reference name. Width is optional
