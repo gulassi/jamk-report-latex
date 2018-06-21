@@ -16,6 +16,7 @@
 \usepackage{geometry}
 \usepackage{eso-pic}
 \setdefaultlanguage[variant=british]{english}
+\graphicspath{ {./images/} }
 
 % bibliography
 \usepackage[british]{babel}
@@ -54,7 +55,7 @@
 \pagenumbering{globber}
 \begin{titlepage}
   \AddToShipoutPicture*{\BlueBox}
-  \includegraphics{images/jamklogo.png}
+  \includegraphics{jamklogo}
   \par
   \vspace{7cm}
   {\LARGE \bfseries \@title \\}
@@ -67,7 +68,7 @@
   \@orgunit \\
   \@studyprogram
   \vfill
-  \includegraphics{images/jamklogo2.png}
+  \includegraphics{jamklogo2}
 \end{titlepage}
 }
 
