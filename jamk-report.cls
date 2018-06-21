@@ -10,8 +10,11 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{setspace}
-\usepackage[nottoc]{tocbibind}
+\usepackage[nottoc,numbib]{tocbibind}
 \usepackage{polyglossia}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{eso-pic}
 \setdefaultlanguage[variant=british]{english}
 
 % bibliography
@@ -31,6 +34,42 @@
 	{0pt}
 	{0pt}
 	{2em}
+
+\newcommand*{\documenttype}[1]{\gdef\@documenttype{#1}%
+}
+\newcommand*{\@documenttype}{Thesis}
+\newcommand*{\orgunit}[1]{\gdef\@orgunit{#1}%
+}
+\newcommand*{\@orgunit}{School of Technology, Communication and Transport}
+\newcommand*{\studyprogram}[1]{\gdef\@studyprogram{#1}%
+}
+\newcommand*{\@studyprogram}{Degree Programme in Information Technology, Cyber Security}
+\definecolor{jamkblue}{RGB}{0,90,125}
+\newcommand\BlueBox{%
+  \put(40,40){%
+    \color{jamkblue}\rule{27pt}{\LenToUnit{\paperheight-80pt}pt}%
+  }
+}
+\renewcommand*{\maketitle}{%
+\pagenumbering{globber}
+\begin{titlepage}
+  \AddToShipoutPicture*{\BlueBox}
+  \includegraphics{images/jamklogo.png}
+  \par
+  \vspace{7cm}
+  {\LARGE \bfseries \@title \\}
+  \vspace{1cm}
+  \@author
+  \par
+  \vspace{4cm}
+  \@documenttype \\
+  \@date \\
+  \@orgunit \\
+  \@studyprogram
+  \vfill
+  \includegraphics{images/jamklogo2.png}
+\end{titlepage}
+}
 
 %% Sub section formatting
 \titleformat{\subsection}
