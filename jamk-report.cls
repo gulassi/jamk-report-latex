@@ -94,7 +94,7 @@
 \renewcommand{\baselinestretch}{1.5}
 
 % set top header
-\setlength{\headheight}{14pt}
+\setlength{\headheight}{15pt}
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
