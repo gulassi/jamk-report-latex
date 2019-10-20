@@ -32,9 +32,9 @@
 % Titles
 \usepackage{titlesec}
 \titlespacing*{\section}
-	{0pt}
-	{0pt}
-	{2em}
+    {0pt}
+    {0pt}
+    {2em}
 
 \newcommand*{\documenttype}[1]{\gdef\@documenttype{#1}%
 }
@@ -75,35 +75,35 @@
 %% Chapter formatting
 \def\@makechapterhead#1{%
   \reset@font
-  \vspace*{10\p@}%
+  \vspace*{24\p@}%
   {\parindent \z@ 
     \begin{flushleft}
-      \reset@font \scshape \bfseries \Huge \thechapter \hspace{10pt} #1\par
+      \reset@font \scshape \bfseries \LARGE \thechapter \hspace{10pt} #1\par
     \end{flushleft}
-    \vskip 20\p@
+    \vskip 12\p@
   }}
 \def\@makeschapterhead#1{%
   \reset@font
-  \vspace*{10\p@}%
+  \vspace*{24\p@}%
   {\parindent \z@ 
     \begin{flushleft}
-      \reset@font \scshape \bfseries \Huge \vphantom{\thechapter} \hspace{10pt} #1\par
+      \reset@font \scshape \bfseries \LARGE \vphantom{\thechapter} \hspace{10pt} #1\par
     \end{flushleft}
-    \vskip 20\p@
+    \vskip 12\p@
   }}
 
 %% Sub section formatting
 \titleformat{\subsection}
-	{\fontsize{14pt}{14pt}\normalfont}
-	{\thesubsection}
-	{2em}
-	{}
+    {\Large}
+    {\thesubsection}
+    {2em}
+    {}
 
 %% sub sub section formatting
 \titleformat{\subsubsection}
-	{\fontsize{13pt}{13pt}\normalfont}
-	{\thesubsubsection}
-	{2em}
+    {\large}
+    {\thesubsubsection}
+    {2em}
     {}
 
 % Fonts
@@ -142,11 +142,11 @@
 %% Takes 4 parameters. width, path to image, caption and reference name. Width is optional
 \newcommand{\jamkfigure}[4][6in]{
     \vspace{1em}
-	\begin{figure}[h]
-		\includegraphics[width=#1]{#2}
-		\caption{#3}
-		\label{#4}
-	\end{figure}
+    \begin{figure}[h]
+        \includegraphics[width=#1]{#2}
+        \caption{#3}
+        \label{#4}
+    \end{figure}
     \vspace{1em}
 }
 
