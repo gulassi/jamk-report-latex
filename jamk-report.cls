@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{jamk-report}[2017/09/02 JAMK Report]
-\LoadClass[12pt]{article}
+\LoadClass[12pt]{report}
 
 \usepackage[margin=2cm,left=4.3cm]{geometry}
 \usepackage[british]{babel}
@@ -72,6 +72,26 @@
 \end{titlepage}
 }
 
+%% Chapter formatting
+\def\@makechapterhead#1{%
+  \reset@font
+  \vspace*{10\p@}%
+  {\parindent \z@ 
+    \begin{flushleft}
+      \reset@font \scshape \bfseries \Huge \thechapter \hspace{10pt} #1\par
+    \end{flushleft}
+    \vskip 20\p@
+  }}
+\def\@makeschapterhead#1{%
+  \reset@font
+  \vspace*{10\p@}%
+  {\parindent \z@ 
+    \begin{flushleft}
+      \reset@font \scshape \bfseries \Huge \vphantom{\thechapter} \hspace{10pt} #1\par
+    \end{flushleft}
+    \vskip 20\p@
+  }}
+
 %% Sub section formatting
 \titleformat{\subsection}
 	{\fontsize{14pt}{14pt}\normalfont}
@@ -79,12 +99,12 @@
 	{2em}
 	{}
 
-%% sub sub sectoin formatting
+%% sub sub section formatting
 \titleformat{\subsubsection}
 	{\fontsize{13pt}{13pt}\normalfont}
 	{\thesubsubsection}
 	{2em}
-	{}
+    {}
 
 % Fonts
 \usepackage{fontspec}
